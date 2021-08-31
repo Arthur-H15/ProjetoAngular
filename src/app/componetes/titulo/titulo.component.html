@@ -1,0 +1,28 @@
+
+
+
+    <div class="title-item">
+      <video [src]="titles.trailer" controls muted="muted"></video>
+      <img [src]="titles.cover" alt="Título">
+      <div class="items">
+        <div class="left-side">
+          <button type="button" class="btn-play"><i class="material-icons">play_arrow</i></button>
+          <h2>{{titles.nome}}</h2>
+          <ul class="infos">
+            <li class="relevance">{{titles.relevancia+"%"}} relevante</li>
+            <li class="age"ngClass="{'age-free':titles.age===0,'age-12':titles.age===12,'age-14':titles.age===14}" ></li>
+            <li class="parts">2 partes</li>
+          </ul>
+          <ul class="categories">
+            <li *ngFor="let categoria of titles.categoria">{{categoria}}</li>
+
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
